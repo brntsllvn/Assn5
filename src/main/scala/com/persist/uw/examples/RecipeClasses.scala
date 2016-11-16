@@ -12,19 +12,27 @@ object RecipeClasses {
   //
   //  }
 
-  case class Ingredient(
-                         val name: String,
-                         val unitOfMeasurement: String,
-                         val numberOfUnitsInContainer: Int,
-                         val pricePerContainer: Int
-                       )
+  case class RawIngredient(
+                            val name: String,
+                            val unitOfMeasurement: String,
+                            val numberOfUnitsInContainer: Int,
+                            val pricePerContainer: Int
+                          )
 
-  class Recipe(ingredients: List[Ingredient]) {
+  case class RecipeIngredient(
+                              val recipe: String,
+                              val rawIngredient: RawIngredient,
+                              val numberOfUnits: Int
+                             )
+
+  class Recipe(ingredients: List[RecipeIngredient]) {
 
     def CalculateRecipeCost: Int = {
-      def CalculateRecipeCostWithAccum(ingredients: List[Ingredient], accum: Int): Int = {
+      def CalculateRecipeCostWithAccum(ingredients: List[RecipeIngredient], accum: Int): Int = {
         ingredients match {
-          case head :: tail => CalculateRecipeCostWithAccum(tail, accum + head.pricePerContainer)
+          case firstIngredient :: remainingIngredients => {
+            CalculateRecipeCostWithAccum(remainingIngredients, accum + firstIngredient.rawIngredient.pricePerContainer)
+          }
           case Nil => accum
         }
       }

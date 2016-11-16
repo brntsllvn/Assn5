@@ -18,17 +18,24 @@ class TestRecipes extends LambdaTest {
 
   def act =
     test("What is the cost of the ingredients in a blt?") {
-      val tomato = Ingredient("tomato", "tomato", 1, 1)
-      val threeSlicesOfBacon = Ingredient("bacon", "slice", 30, 4)
-      val twoSlicesOfBread = Ingredient("bread", "slice", 20, 2)
-      val twoSlicesOfLettuce = Ingredient("lettuce", "leaf", 30, 2)
+      val rawTomato = RawIngredient("tomato", "tomato", 1, 2)
+      val bltTomato = RecipeIngredient("blt", rawTomato, 1)
 
-      val bltIngredients = List(tomato, threeSlicesOfBacon, twoSlicesOfBread, twoSlicesOfLettuce)
+      val rawBacon = RawIngredient("bacon", "slice", 30, 4)
+      val bltBacon = RecipeIngredient("blt", rawBacon, 3)
 
-      val expectedBltCost = (tomato.pricePerContainer
-        + threeSlicesOfBacon.pricePerContainer
-        + twoSlicesOfBread.pricePerContainer
-        + twoSlicesOfLettuce.pricePerContainer)
+      val rawBread = RawIngredient("bread", "slice", 20, 2)
+      val bltBread = RecipeIngredient("blt", rawBread, 2)
+
+      val rawLettuce = RawIngredient("lettuce", "leaf", 30, 2)
+      val bltLettuce = RecipeIngredient("lettuce", rawLettuce, 2)
+
+      val bltIngredients = List(bltTomato, bltBacon, bltBread, bltLettuce)
+
+      val expectedBltCost = (bltTomato.rawIngredient.pricePerContainer
+        + bltBacon.rawIngredient.pricePerContainer
+        + bltBread.rawIngredient.pricePerContainer
+        + bltLettuce.rawIngredient.pricePerContainer)
 
       val blt = new Recipe(bltIngredients)
       val actualBltCost = blt.CalculateRecipeCost

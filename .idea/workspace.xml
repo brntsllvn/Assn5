@@ -28,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestRecipes.scala" pinned="true" current-in-tab="false">
+      <file leaf-file-name="TestRecipes.scala" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/LambdaTest/TestRecipes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+            <state relative-caret-position="181">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -41,18 +41,18 @@
       <file leaf-file-name="RecipeExample.scala" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/LambdaTest/RecipeExample.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="270">
               <caret line="21" column="61" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecipeClasses.scala" pinned="true" current-in-tab="true">
+      <file leaf-file-name="RecipeClasses.scala" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/persist/uw/examples/RecipeClasses.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state relative-caret-position="135">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -70,8 +70,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/scala/OtherStuff/SCTestTree1.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/LambdaTest/RecipeExample.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/LambdaTest/TestRecipes.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/persist/uw/examples/RecipeClasses.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/LambdaTest/TestRecipes.scala" />
       </list>
     </option>
   </component>
@@ -764,9 +764,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/persist/uw/examples/RecipeClasses.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/LambdaTest/RecipeExample.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="270">
           <caret line="21" column="61" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="61" />
           <folding />
         </state>
@@ -774,16 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/LambdaTest/TestRecipes.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/persist/uw/examples/RecipeClasses.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="181">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
           <folding />
         </state>
       </provider>
