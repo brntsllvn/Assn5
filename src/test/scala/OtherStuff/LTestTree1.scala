@@ -1,4 +1,4 @@
-package LambdaTest
+package OtherStuff
 
 import com.fortysevendeg.lambdatest._
 import com.persist.uw.examples._

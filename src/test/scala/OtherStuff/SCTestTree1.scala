@@ -1,11 +1,11 @@
-package LambdaTest
+package OtherStuff
 
 import com.fortysevendeg.lambdatest._
 import com.persist.uw.examples._
-import org.scalacheck._
-import org.scalacheck.Prop._
 import org.scalacheck.Arbitrary.arbitrary
 import org.scalacheck.Gen._
+import org.scalacheck.Prop._
+import org.scalacheck._
 
 class SCTestTree1 extends LambdaTest {
 

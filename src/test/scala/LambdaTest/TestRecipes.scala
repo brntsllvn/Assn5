@@ -13,61 +13,78 @@ class TestRecipes extends LambdaTest {
   def nop: Unit = ()
 
   val r = RecipeExample
+
   import r._
 
   def act =
     test("What is the cost of the ingredients in a blt?") {
-      //val cost = ???
-      // Feel free to make this a real test by changing second cost
-      // to expected value
+      val tomato = Ingredient("tomato", "tomato", 1, 1)
+      val threeSlicesOfBacon = Ingredient("bacon", "slice", 30, 4)
+      val twoSlicesOfBread = Ingredient("bread", "slice", 20, 2)
+      val twoSlicesOfLettuce = Ingredient("lettuce", "leaf", 30, 2)
+
+      val bltIngredients = List(tomato, threeSlicesOfBacon, twoSlicesOfBread, twoSlicesOfLettuce)
+
+      val expectedBltCost = (tomato.pricePerContainer
+        + threeSlicesOfBacon.pricePerContainer
+        + twoSlicesOfBread.pricePerContainer
+        + twoSlicesOfLettuce.pricePerContainer)
+
+      val blt = new Recipe(bltIngredients)
+      val actualBltCost = blt.CalculateRecipeCost
+
+      assertEq(actualBltCost, expectedBltCost, "blt costs")
+
+
       // assertEq(cost,cost,"blt costs")
-      nyi
-    } +
-    test("What ingredients do I need to make a quiche?") {
-      nyi
-    } +
-    test("What ingredients do I have in my house?") {
-      nyi
-    } +
-    test("Buying everything I need to make scrambled eggs and a quiche") {
-      // this is in addition to what is already in house
-      // Note: you can only buy whole packages (so round up)
-      // Report the cost of groceries purchased
-      nyi
-    } +
-    test("What ingredients do I have in my house?") {
-      nyi
-    } +
-    label("Preparing a quiche") {
-      exec {
-        // this should remove the ingredients used from the inventory
-        nop
-      }
-    } +
-    test("What ingredients do I have in my house?") {
-      // After the quiche wa prepared
-      nyi
-    } +
-    test("What recipes in my cookbook use bacon?") {
-      nyi
-    } +
-    test("How do I prepare a blt?") {
-      nyi
-    } +
-    test("What recipes in my cookbook do I now have enough ingredients to prepare?") {
-      nyi
-    } +
-    test("Going shopping") {
-      // Set up shopping list with 10 tomatoes and 50 T butter
-      // Only whole packages can be purchased
-      // Add my purchases to my inventory
-      // Report the cost of the purchase
-      nyi
-    } +
-    test("What ingredients do I have in my house?") {
-      // After shopping
-      nyi
+      //      nyi
     }
+
+//      test("What ingredients do I need to make a quiche?") {
+//        nyi
+//      } +
+//      test("What ingredients do I have in my house?") {
+//        nyi
+//      } +
+//      test("Buying everything I need to make scrambled eggs and a quiche") {
+//        // this is in addition to what is already in house
+//        // Note: you can only buy whole packages (so round up)
+//        // Report the cost of groceries purchased
+//        nyi
+//      } +
+//      test("What ingredients do I have in my house?") {
+//        nyi
+//      } +
+//      label("Preparing a quiche") {
+//        exec {
+//          // this should remove the ingredients used from the inventory
+//          nop
+//        }
+//      } +
+//      test("What ingredients do I have in my house?") {
+//        // After the quiche wa prepared
+//        nyi
+//      } +
+//      test("What recipes in my cookbook use bacon?") {
+//        nyi
+//      } +
+//      test("How do I prepare a blt?") {
+//        nyi
+//      } +
+//      test("What recipes in my cookbook do I now have enough ingredients to prepare?") {
+//        nyi
+//      } +
+//      test("Going shopping") {
+//        // Set up shopping list with 10 tomatoes and 50 T butter
+//        // Only whole packages can be purchased
+//        // Add my purchases to my inventory
+//        // Report the cost of the purchase
+//        nyi
+//      } +
+//      test("What ingredients do I have in my house?") {
+//        // After shopping
+//        nyi
+//      }
 }
 
 
